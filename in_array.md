@@ -19,6 +19,7 @@ I have some jQuery watching a form:
 If the zip code entered is in the list, a class is added.
 If the zip code is then changed to one that is not on the list, the class is removed.
 
+```javascript
 $(document).ready(function($){
     $('#field-zip-value').on('blur', function() {
     var input = $(this);
@@ -42,10 +43,10 @@ $(document).ready(function($){
     }); // end ajax call
   });
 });
-
+```
 
 The checkzip.php
-
+```php
 if(isset($_REQUEST['keys'])) {
   $search = $_REQUEST['keys'];
   $matches = array();
@@ -59,6 +60,6 @@ if(isset($_REQUEST['keys'])) {
     echo "Nope";
   }
 }
-
+```
 **It is the true in the in_array() that fixed the leading zero issue, as the zip codes
 were being treated as integers instead of strings.
