@@ -63,4 +63,4 @@ if(isset($_REQUEST['keys'])) {
 }
 ```
 **It is the true in the in_array() that fixed the leading zero issue, as the zip codes
-were being treated as integers instead of strings.
+were being treated as integers instead of strings.**
