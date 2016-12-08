@@ -25,3 +25,8 @@ In the Puncuation select No Action for Slash (/)
 URL Patterns
 product/[node:[FIELD]:parents:join-path]/[node:title]/
 The rub here is parents:join-path
+
+Here's another one:
+
+Tax relative URL
+[node:field-cat-id:0:url:relative]/[node:title]
