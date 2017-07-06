@@ -1,11 +1,11 @@
 Here's a fun one.
 
-This function returns an array:
+This function returns an array, but we need it a custom array:
 ~~~~~
 
 $result = playerEquipment($view->result[0]->field_field_player_equipment[0]['raw']['value']);
 
-~~~~~
+
 Array
 (
     [Glove] => Array
@@ -35,9 +35,6 @@ Array
 
 )
 
-Which is all and good, accept it needs to be in a new order
-
-~~~~~
 
 $reorderedArray = array_merge(array_flip(array('Stick', 'Helmet', 'Glove', 'Skates', 'Pants')), $result);
 
