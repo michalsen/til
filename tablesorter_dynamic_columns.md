@@ -7,21 +7,33 @@ Maybe tomorrow.
 
 ~~~~~
 
+/**
+ *  OK, really need to redo this one.
+ *  Waaaay too much redunant code
+ *
+ */
+
+
 
 jQuery(document).ready(function()
     {
+
+      // Counts table columns
       var stickColumn  = jQuery("#player_roster_stick table > tbody > tr:first > td").length;
       var gloveColumn  = jQuery("#player_roster_glove table > tbody > tr:first > td").length;
       var pantsColumn  = jQuery("#player_roster_pants table > tbody > tr:first > td").length;
       var skateColumn  = jQuery("#player_roster_skates table > tbody > tr:first > td").length;
       var helmetColumn = jQuery("#player_roster_helmet table > tbody > tr:first > td").length;
 
+      // Creates Arrays
       var stickSorter = [];
       var gloveSorter = [];
       var pantsSorter = [];
       var skateSorter = [];
       var helmetSorter = [];
 
+
+      // Populates Arrays
       for (index = 0; index < stickColumn; ++index) {
          stickSorter.push([index,0]);
       }
@@ -38,6 +50,7 @@ jQuery(document).ready(function()
          helmetSorter.push([index,0]);
       }
 
+      // Sets the sortList for each table
       jQuery("#player_roster_stick .sticky-table").tablesorter({
          sortList: stickSorter
       });
